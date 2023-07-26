@@ -14,26 +14,26 @@ export default function Data({ paginatePosts }) {
                 target="_blank"
               />
               <div className="p-9">
-                <h2 className="text-center font-bold pb-4 text-lg">
+                <h2 className="text-center font-bold pb-4 text-md text-gray-600">
                   {`${source.author
                     ? source.author
                     : "Facebook"
                     }`}
                 </h2>
-                <p className=" text-gray-600 text-left">{`${source.title
+                <p className=" text-gray-600 text-center">{`${source.title
                   ? source.title
                   : "It's no secret that most people who travel via plane hate their tiny, cramped seats. But airplane seating isn't just uncomfortable it might be unsafe for some. A new bill moving through Congress aims…"
                   }`}</p>
 
-                <p className="text-gray-600 text-left">{`${source.description
+                <p className="text-gray-600 text-center">{`${source.description
                   ? source.description
                   : "It's no secret that most people who travel via plane hate their tiny, cramped seats. But airplane seating isn't just uncomfortable it might be unsafe for some. A new bill moving through Congress aims…"
                   }`}</p>
-                <p className="text-gray-600 text-left">{`${source.content
+                <p className="text-gray-600 text-center">{`${source.content
                   ? source.content
                   : "It's no secret that st people who travel via plane hate their tiny, cramped seats. But airplane seating isn't just uncomfortable it  most people who travel via plane hate their tiny, cramped seats. But airplane seating isn't just uncomfortable it might be unsafe for some. A new bill moving through Congress aims…"
                   }`}</p>
-                <p className="flex flex-row text-gray-900 font-bold justify-center mt-6">
+                <p className="text-gray-600 font-bold text-center mt-4">
                   {source.publishedAt}
                 </p>
               </div>
