@@ -8,7 +8,7 @@ const Pagination = ({ items, pageSize, currentPage, onPageChange, nextPage, preP
         <>
             <div className="grid m-9 place-items-center">
                 <nav aria-label="Page navigation example">
-                    <ul className="flex items-center -space-x-px h-10 text-base">
+                    <ul className="flex items-center h-10">
                         <li>
                             <a onClick={prePage} className="page-link relative block rounded-full bg-slate-500 px-3 py-1.5 transition duration-300 ease-in-out hover:scale-110 text-sm text-neutral-400 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700 dark:hover:text-white">
                                 Previous
