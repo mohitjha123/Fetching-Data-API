@@ -6,7 +6,7 @@ import Data from "./components/Data";
 import Footer from "./components/Footer";
 import Pagination from "./components/Pagination";
 import { paginate } from "../utils/paginate";
-import PropagateLoader from "react-spinners/PropagateLoader";
+import RiseLoader from "react-spinners/RiseLoader";
 import { GlobalContext } from "./context/GlobalContext";
 
 export default function Home() {
@@ -15,7 +15,9 @@ export default function Home() {
     pageSize,
     loading,
     handlePageChange,
-    filteredData
+    filteredData,
+    nextPage,
+    prePage
   } = useContext(GlobalContext);
 
 
@@ -27,7 +29,7 @@ export default function Home() {
       {/* DATA */}
       <div className="flex justify-center">
         {loading ? (
-          <PropagateLoader
+          <RiseLoader
             className="mt-40"
             color={"#1161f5"}
             loading={loading}
@@ -44,6 +46,8 @@ export default function Home() {
         currentPage={currentPage}
         pageSize={pageSize}
         onPageChange={handlePageChange}
+        nextPage={nextPage}
+        prePage={prePage}
       />
 
       {/* Footer */}

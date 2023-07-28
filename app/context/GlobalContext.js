@@ -6,8 +6,8 @@ export const GlobalContext = createContext();
 export function GlobalContextProvider({ children }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [data, setData] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize] = useState(8);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [pageSize] = useState(9);
   const [loading, setLoading] = useState(false);
   const [filteredData, setFilteredData] = useState([]); // Initially, filteredData is an empty array
 
@@ -43,6 +43,18 @@ export function GlobalContextProvider({ children }) {
     setFilteredData(filteredData);
     setCurrentPage(1); // Reset current page when applying new filters
   };
+  function prePage() {
+    if (currentPage !== 0) {
+      setCurrentPage(currentPage - 1)
+    }
+  }
+
+  function nextPage() {
+    if (currentPage !== 8) {
+      setCurrentPage(currentPage === 9 ? currentPage - 1 : currentPage + 1)
+    }
+  }
+
 
 
   return (
@@ -59,6 +71,8 @@ export function GlobalContextProvider({ children }) {
         setSearchQuery,
         filteredData,
         handleFilterData,
+        prePage,
+        nextPage,
       }}
     >
       {children}
